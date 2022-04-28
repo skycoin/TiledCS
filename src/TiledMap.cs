@@ -289,10 +289,10 @@ namespace TiledCS
             if (attrVisible != null) tiledLayer.visible = attrVisible.Value == "1";
             if (attrLocked != null) tiledLayer.locked = attrLocked.Value == "1";
             if (attrTint != null) tiledLayer.tintcolor = attrTint.Value;
-            if (attrOffsetX != null) tiledLayer.offsetX = float.Parse(attrOffsetX.Value);
-            if (attrOffsetY != null) tiledLayer.offsetY = float.Parse(attrOffsetY.Value);
-            if (attrParallaxX != null) tiledLayer.offsetX = float.Parse(attrParallaxX.Value);
-            if (attrParallaxY != null) tiledLayer.offsetY = float.Parse(attrParallaxY.Value);
+            if (attrOffsetX != null) tiledLayer.offsetX = float.Parse(attrOffsetX.Value, CultureInfo.InvariantCulture);
+            if (attrOffsetY != null) tiledLayer.offsetY = float.Parse(attrOffsetY.Value, CultureInfo.InvariantCulture);
+            if (attrParallaxX != null) tiledLayer.offsetX = float.Parse(attrParallaxX.Value, CultureInfo.InvariantCulture);
+            if (attrParallaxY != null) tiledLayer.offsetY = float.Parse(attrParallaxY.Value, CultureInfo.InvariantCulture);
             if (nodesProperty != null) tiledLayer.properties = ParseProperties(nodesProperty);
 
             ParseTileLayerData(nodeData, ref tiledLayer);
